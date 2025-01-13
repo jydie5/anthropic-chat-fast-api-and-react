@@ -1,0 +1,168 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+  text-align: left;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: white;
+  margin-left: auto;
+}
+
+.message.assistant {
+  background-color: #e9ecef;
+  color: #000;
+  margin-right: auto;
+}
+
+.message.error {
+  background-color: #dc3545;
+  color: white;
+  margin: 10px auto;
+}
+
+.message.loading {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  text-align: center;
+  margin: 10px auto;
+}
+
+/* Markdownスタイリング */
+.message-content {
+  overflow-x: auto;
+}
+
+/* コードブロック */
+.message-content pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+
+/* インラインコード */
+.message-content code {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ユーザーメッセージ内のコード */
+.message.user .message-content code {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* 見出し */
+.message-content h1,
+.message-content h2,
+.message-content h3,
+.message-content h4,
+.message-content h5,
+.message-content h6 {
+  margin: 0.5em 0;
+  line-height: 1.2;
+}
+
+/* リスト */
+.message-content ul,
+.message-content ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+/* リンク */
+.message-content a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.message-content a:hover {
+  text-decoration: underline;
+}
+
+/* ユーザーメッセージ内のリンク */
+.message.user .message-content a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.input-form {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.input-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.input-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.input-form button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.input-form input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
